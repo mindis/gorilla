@@ -1,7 +1,7 @@
 var express = require('express'),
   redis = require('redis'),
   ml = requires('ml'),
-  model = ml.NodeLiblinear(10),
+  model = ml.NodePersona(10),
   client = redis.createClient(),
   app = express();
 
