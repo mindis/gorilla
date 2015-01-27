@@ -48,20 +48,20 @@ typedef struct LinearModelT* GorillaModel;
 class NodePersona : public node::ObjectWrap {
  public:
   static void Init(v8::Handle<v8::Object> target);
-  static void Train(v8::Handle<v8::Object> target);
-  static void Merge(v8::Handle<v8::Object> target);
-  static void Validate(v8::Handle<v8::Object> target);
-  static void Test(v8::Handle<v8::Object> target);
-  static void AddData(v8::Handle<v8::Object> target);
-  static void SplitData(v8::Handle<v8::Object> target);
-  static void RandomData(v8::Handle<v8::Object> target);
-  static void Serialize(v8::Handle<v8::Object> target);
-  static void Deserialize(v8::Handle<v8::Object> target);
-  static void ResetParameter(v8::Handle<v8::Object> target);
-  static void ResetModel(v8::Handle<v8::Object> target);
-  static v8::Handle<v8::Value> GetROC(v8::Handle<v8::Object> target);
-  static v8::Handle<v8::Value> GetPRC(v8::Handle<v8::Object> target);
-  static v8::Handle<v8::Value> GetAccuracy(v8::Handle<v8::Object> target);
+  static void Train(const v8::Arguments& args);
+  static void Merge(const v8::Arguments& args);
+  static void Validate(const v8::Arguments& args);
+  static void Test(const v8::Arguments& args);
+  static void AddData(const v8::Arguments& args);
+  static void SplitData(const v8::Arguments& args);
+  static void RandomData(const v8::Arguments& args);
+  static void Serialize(const v8::Arguments& args);
+  static void Deserialize(const v8::Arguments& args);
+  static void ResetParameter(const v8::Arguments& args);
+  static void ResetModel(const v8::Arguments& args);
+  static v8::Handle<v8::Value> GetROC(const v8::Arguments& args);
+  static v8::Handle<v8::Value> GetPRC(const v8::Arguments& args);
+  static v8::Handle<v8::Value> GetAccuracy(const v8::Arguments& args);
 
  private:
   int _dim;

@@ -769,7 +769,7 @@ void NodePersona::Init(Handle<Object> target) {
  *         float eps, the precision tolerance. 1e-4 should be good enough
  *         int max_num_iters, the maximum number of iterations for dual coordinate descent solver can run
  */
-void NodePersona::ResetParameter(Handle<Object> target)
+void NodePersona::ResetParameter(const Arguments& args)
 {
   //TODO:
 }
@@ -777,7 +777,7 @@ void NodePersona::ResetParameter(Handle<Object> target)
 /**
  * Reset the coefficients for the model
  */
-void NodePersona::ResetModel(Handle<Object> target)
+void NodePersona::ResetModel(const Arguments& args)
 {
   //TODO:
 }
@@ -787,7 +787,7 @@ void NodePersona::ResetModel(Handle<Object> target)
  * Input: float[] z, a consensus model passed from parent
  *        int warm_start, a flag to choose warm start or not
  */
-void NodePersona::Train(Handle<Object> target)
+void NodePersona::Train(const Arguments& args)
 {
   //TODO:
 }
@@ -796,7 +796,7 @@ void NodePersona::Train(Handle<Object> target)
  * Does one merge step for Asynchronous ADMMs
  * Input: float[] dq, a difference from the child personal model
  */
-void NodePersona::Merge(Handle<Object> target)
+void NodePersona::Merge(const Arguments& args)
 {
   //TODO:
 }
@@ -804,7 +804,7 @@ void NodePersona::Merge(Handle<Object> target)
 /**
  * Perform prediction for the validation dataset
  */
-void NodePersona::Validate(Handle<Object> target)
+void NodePersona::Validate(const Arguments& args)
 {
   //TODO:
 }
@@ -812,7 +812,7 @@ void NodePersona::Validate(Handle<Object> target)
 /**
  * Perform prediction for the test dataset
  */
-void NodePersona::Test(Handle<Object> target)
+void NodePersona::Test(const Arguments& args)
 {
   //TODO:
 }
@@ -823,7 +823,7 @@ void NodePersona::Test(Handle<Object> target)
  *        float y, the target value (-1 for negative example, 1 for positive example)
  *        float c, the weight to this example, (might have different value for positive example, and negative example)
  */
-void NodePersona::AddData(Handle<Object> target)
+void NodePersona::AddData(const Arguments& args)
 {
   //TODO:
 }
@@ -833,7 +833,7 @@ void NodePersona::AddData(Handle<Object> target)
  * Input: float ratio_train, the fraction for the training data
  *        float ratio_test, the fraction for the test data
  */
-void NodePersona::SplitData(Handle<Object> target)
+void NodePersona::SplitData(const Arguments& args)
 {
   //TODO:
 }
@@ -841,7 +841,7 @@ void NodePersona::SplitData(Handle<Object> target)
 /**
  * Create a random data for debuging purpose
  */
-void NodePersona::RandomData(Handle<Object> target)
+void NodePersona::RandomData(const Arguments& args)
 {
   //TODO:
 }
@@ -849,7 +849,7 @@ void NodePersona::RandomData(Handle<Object> target)
 /**
  * Taking a snapshot of the model and the data, store them in a file
  */
-void NodePersona::Serialize(Handle<Object> target)
+void NodePersona::Serialize(const Arguments& args)
 {
   //TODO:
 }
@@ -857,7 +857,7 @@ void NodePersona::Serialize(Handle<Object> target)
 /**
  * Restore the object from the cache file
  */
-void NodePersona::Deserialize(Handle<Object> target)
+void NodePersona::Deserialize(const Arguments& args)
 {
   //TODO:
 }
@@ -867,7 +867,7 @@ void NodePersona::Deserialize(Handle<Object> target)
  * Output: float[], an array of FPR
  *         float[], an array of recalls
  */
-Handle<Value> NodePersona::GetROC(Handle<Object> target)
+Handle<Value> NodePersona::GetROC(const Arguments& args)
 {
   //TODO:
 }
@@ -877,7 +877,7 @@ Handle<Value> NodePersona::GetROC(Handle<Object> target)
  * Output: float[], an array of Precisions
  *         float[], an array of Recalls
  */
-Handle<Value> GetPRC(Handle<Object> target)
+Handle<Value> NodePersona::GetPRC(const Arguments& args)
 {
   //TODO:
 }
@@ -885,7 +885,7 @@ Handle<Value> GetPRC(Handle<Object> target)
 /**
  * After performing test, get the accuracy report
  */
-Handle<Value> GetAccuracy(Handle<Object> target)
+Handle<Value> NodePersona::GetAccuracy(const Arguments& args)
 {
   //TODO:
 }
